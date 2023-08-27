@@ -4,6 +4,7 @@ import com.cydeo.utilities.WebDriver_Factory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -48,6 +49,8 @@ public class T1_WebTablePractice {
         //2. VerifyBob’s name is listed as expected.
         String expectedNameOfBob = "Bob Martin";
         String actualNameOfBob = BobMartinCell.getText();
+
+        Assert.assertEquals(actualNameOfBob, expectedNameOfBob);
 
 
     }
