@@ -82,6 +82,13 @@ public class T1_WebTablePractice {
     }
 
 
+    //Using WebTableUtils.orderVerify(); Method
+    @Test
+    public void test3(){
+
+        WebTableUtils.oderVerify(driver, "Bart Fisher","01/16/2021");
+
+    }
 
 
 }
