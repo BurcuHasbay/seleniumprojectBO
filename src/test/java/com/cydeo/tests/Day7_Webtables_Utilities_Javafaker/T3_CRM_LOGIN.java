@@ -31,6 +31,7 @@ public class T3_CRM_LOGIN {
 
         //6. Verify title is as expected:
         //Expected:Authorization
+        //Because the given password is wrong
 
         BrowserUtils.verifyTitle(driver, "Authorization");
 
