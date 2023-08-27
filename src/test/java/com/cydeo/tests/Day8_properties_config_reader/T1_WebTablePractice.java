@@ -35,14 +35,19 @@ public class T1_WebTablePractice {
     @Test
     public void order_name_verify_Test(){
 
-        //2. VerifyBob’s name is listed as expected.
+
 //You can use this
 // - //table[@id='ctl00_MainContent_orderGrid']//tbody/tr[7]/td[2]
 // but what if another name is added to the cell? Where would Bob's name go?
         //That is why, you need to use the text of the name.
 
-        WebElement BobMartinsName = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
+        WebElement BobMartinCell = driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']"));
 
+        System.out.println("BobMartinCell.getText() = " + BobMartinCell.getText());
+
+        //2. VerifyBob’s name is listed as expected.
+        String expectedNameOfBob = "Bob Martin";
+        String actualNameOfBob = BobMartinCell.getText();
 
 
     }
