@@ -17,8 +17,7 @@ public class T1_WebTablePractice {
 
 
 //Expected: “Bob Martin”
-//3. VerifyBobMartin’s order date is as expected
-//Expected: 12/31/2021
+
      */
 
     WebDriver driver;
@@ -51,6 +50,22 @@ public class T1_WebTablePractice {
         String actualNameOfBob = BobMartinCell.getText();
 
         Assert.assertEquals(actualNameOfBob, expectedNameOfBob);
+
+
+        //3. VerifyBobMartin’s order date is as expected
+        //Expected: 12/31/2021
+            //-- //table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]
+
+        WebElement bobMartinDateCELL =
+                driver.findElement(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']/following-sibling::td[3]"));
+
+        System.out.println("bobMartinDateCELL.getText() = " + bobMartinDateCELL.getText());
+
+        String expectedBobMartinDate = "12/31/2021";
+        String actualBobMartinDate = bobMartinDateCELL.getText();
+
+        Assert.assertEquals(expectedBobMartinDate,actualBobMartinDate);
+
 
 
     }
