@@ -77,7 +77,7 @@ public class T1_WebTablePractice {
     public void test2(){
        String costumerOrderDate1= WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
 
-
+        System.out.println("costumerOrderDate1 = " + costumerOrderDate1);
 
     }
 
