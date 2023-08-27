@@ -14,6 +14,14 @@ public class WebTableUtils {
 
         return customerDateCell.getText();
 
+        //OR
+
+        /*
+        public static String returnOrderDate2(WebDriver driver, String customerName) {
+        return driver. findElement (By.path ("//td[.='"+customerName+"']/following-sibling::td[3]")).getText);
+
+         */
+
 
 
 
