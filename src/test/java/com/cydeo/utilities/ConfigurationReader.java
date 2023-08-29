@@ -13,7 +13,7 @@ public class ConfigurationReader {
 
         try {
 
-            FileInputStream file = new FileInputStream("configuration.properties")
+            FileInputStream file = new FileInputStream("configuration.properties");
             properties.load(file);
 
             //It is better to close it if it is not in use.
