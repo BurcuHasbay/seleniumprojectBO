@@ -1,6 +1,6 @@
 package com.cydeo.tests.Day8_properties_config_reader;
 
-import com.cydeo.utilities.WebDriver_Factory;
+import com.cydeo.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,8 +16,9 @@ public class T4_Config_Practice {
     WebDriver driver;
     @BeforeMethod
     public void setUpMethod(){
+//We are getting the browserType dynamically from our configuration.properties file
+        String browserType = ConfigurationReader.getProperty("browser");
 
-        driver = WebDriver_Factory.getDriver("Chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://google.com");
@@ -34,7 +35,7 @@ public class T4_Config_Practice {
 
         googleSearchBox.sendKeys("apple"+ Keys.ENTER);
 
-        String expectedTitle = "apple - Google Search";
+        String expectedTitle = "apple - Google'da Ara";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle);
