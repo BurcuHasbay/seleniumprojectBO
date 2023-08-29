@@ -9,23 +9,19 @@ import java.util.Properties;
 public class ReadingProperties {
 
     @Test
-    public void readingFrom_Properties_Test() throws IOException {
+public void reading_from_properties_test() throws IOException {
 
-        //1-Create the object of Properties
         Properties properties = new Properties();
-
-
-        //2-We need to open the file in java memory: FileInputStream
 
         FileInputStream file = new FileInputStream("configuration.properties");
 
-        //3-Load the properties object using FileInputStream object
         properties.load(file);
-
-        //4-We can get any "value" now by passing "Key"
 
         System.out.println("properties.getProperty(\"browser\") = " + properties.getProperty("browser"));
 
-    }
 
+    }
 }
+
+
+
