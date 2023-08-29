@@ -2,8 +2,10 @@ package com.cydeo.tests.Day8_properties_config_reader;
 
 import com.cydeo.utilities.WebDriver_Factory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -30,7 +32,12 @@ public class T4_Config_Practice {
 
         WebElement googleSearchBox = driver.findElement(By.xpath("//textarea[@name ='q']"));
 
+        googleSearchBox.sendKeys("apple"+ Keys.ENTER);
 
+        String expectedTitle = "apple - Google Search";
+        String actualTitle = driver.getTitle();
+
+        Assert.assertEquals(actualTitle,expectedTitle);
 
     }
 
