@@ -22,7 +22,7 @@ public class ConfigurationReader {
 
         } catch (IOException e) {
             System.out.println("Something happened in the ConfigurationReader class ");
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
     }
