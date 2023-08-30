@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T4_Config_Practice {
+public class  T4_Config_Practice {
 
     WebDriver driver;
     @BeforeMethod
