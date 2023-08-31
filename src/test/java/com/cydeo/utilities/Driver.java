@@ -25,6 +25,11 @@ public class Driver {
     public static WebDriver getDriver() {
         if (driver == null) {
 
+            /*
+            This way we can control which browser is opened from outside our code.
+             */
+            String browserType = ConfigurationReader.getProperty("browser");
+
         }
         return driver;
     }
