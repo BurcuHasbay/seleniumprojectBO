@@ -30,6 +30,24 @@ private static WebDriver getDriver(){
     if (driver ==null){
 
         String browserType = ConfigurationReader.getProperty("browser");
+
+        switch (browserType){
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+                break;
+
+        }
+
+        switch (browserType){
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                break;
+        }
+
     }
 
     return driver;
