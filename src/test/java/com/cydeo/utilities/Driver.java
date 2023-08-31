@@ -31,6 +31,12 @@ private static WebDriver getDriver(){
 
         String browserType = ConfigurationReader.getProperty("browser");
 
+        /*
+        Depending on the browser type that will be return from the configuration.properties file
+        switching statement will determine the case, and open the matching browser.
+         */
+
+
         switch (browserType){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
