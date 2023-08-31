@@ -33,7 +33,7 @@ public class Driver {
             /*
             This way we can control which browser is opened from outside our code.
              */
-      String browserType = ConfigurationReader.getProperty("browser");
+            browserType = ConfigurationReader.getProperty("browser");
 
       switch (browserType){
           case "chrome":
