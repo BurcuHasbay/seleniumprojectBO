@@ -14,10 +14,11 @@ public class T1_Registration_Form {
 //Note: Use JavaFaker OR read from configuration.properties file when possible.
 //1. Open browser
 //2. Go to website:https://practice.cydeo.com/registration_form
-       // Driver.getDriver().get("https://practice.cydeo.com/registration_form"); This is OK But now we want to use
-        //configuration properties as possible.
+      Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
+      //Use configuration properties as possible.
+
+       // Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
 
 
