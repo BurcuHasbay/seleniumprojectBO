@@ -3,64 +3,47 @@ package com.cydeo.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    /*
-    Creating a private constructor so that we can close accessing to the object
-    of thşs class from outside the class.
-     */
-    private Driver() {
-    }
+private Driver(){}
 
-    /*
-    We make WebDriver private, because we want to close access from outside of the class.
-    We make it static because, we will use it in a static method.
-     */ private static WebDriver driver;
+    private static WebDriver driver;
 
 
+    public static WebDriver getDriver(){
 
-    /*
-    Create a re-usable utility method which will return the same driver instance when we call it.
-     */
+        if (driver == null){
+            String browserType = ConfigurationReader.getProperty("browser");
 
-public static WebDriver getDriver(){
-    if (driver ==null){
+            switch (browserType){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+                    break;
 
-        String browserType = ConfigurationReader.getProperty("browser");
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
 
-        /*
-        Depending on the browser type that will be return from the configuration.properties file
-        switching statement will determine the case, and open the matching browser.
-         */
 
+            }
+                }
+                return driver;
 
-        switch (browserType){
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver.manage().window().maximize();
-                driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-                break;
 
         }
 
-        switch (browserType){
-            case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                driver.manage().window().maximize();
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                break;
-        }
 
     }
-
-    return driver;
-}
-
-
-
 
 
 
