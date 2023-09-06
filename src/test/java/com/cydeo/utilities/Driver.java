@@ -18,7 +18,7 @@ public class Driver {
     /*
     We make WebDriver private, because we want to close access from outside of the class.
     We make it static because, we will use it in a static method.
-     */ public static WebDriver driver;
+     */ private static WebDriver driver;
 
 
 
