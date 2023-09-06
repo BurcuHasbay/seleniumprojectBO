@@ -37,12 +37,19 @@ public class T1_Registration_Form {
 
         inputLastName.sendKeys(faker.name().lastName());
 
-        //5. Enter username
+      // ANOTHER WAY >> userName.sendKeys(faker.name().username().replaceAll("\\.","")); //didn't work for me!
+
         WebElement userName= Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
 
+        String user = faker.bothify("helpdesk###");
 
+        //5. Enter username
+        userName.sendKeys((CharSequence) user);
 
+        //6. Enter email address
+        WebElement emailAddress = Driver.getDriver().findElement(By.xpath("//input[@name='email']"));
 
+        emailAddress.sendKeys(user + "@hotmail.com");
 
 
     }
@@ -54,7 +61,7 @@ public class T1_Registration_Form {
 
 
 
-//6. Enter email address
+
 //7. Enter password
 //8. Enter phone number
 //9. Select a gender from radio buttons
