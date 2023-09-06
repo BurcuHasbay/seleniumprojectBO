@@ -1,5 +1,7 @@
 package com.cydeo.tests.Day10_uploadAction_jsexecutor;
 
+import com.cydeo.utilities.ConfigurationReader;
+import com.cydeo.utilities.Driver;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -8,15 +10,25 @@ public class T1_Registration_Form {
     @Test
     public void test1_registration(){
 
+        //TC#1: Registration form confirmation
+//Note: Use JavaFaker OR read from configuration.properties file when possible.
+//1. Open browser
+//2. Go to website:https://practice.cydeo.com/registration_form
+       // Driver.getDriver().get("https://practice.cydeo.com/registration_form"); This is OK But now we want to use
+        //configuration properties as possible.
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
+
+
+
+
+
     }
 }
 
 
 
-//TC#1: Registration form confirmation
-//Note: Use JavaFaker OR read from configuration.properties file when possible.
-//1. Open browser
-//2. Go to website:https://practice.cydeo.com/registration_form
+
 //3. Enter first name
 //4. Enter last name
 //5. Enter username
