@@ -33,6 +33,14 @@ public class T1_Registration_Form {
         inputFirstName.sendKeys(faker.name().firstName());
 
         //4. Enter last name
+        WebElement inputLastName = Driver.getDriver().findElement(By.xpath("//input[@name='lastname']"));
+
+        inputLastName.sendKeys(faker.name().lastName());
+
+        //5. Enter username
+        WebElement userName= Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
+
+
 
 
 
@@ -45,7 +53,7 @@ public class T1_Registration_Form {
 
 
 
-//5. Enter username
+
 //6. Enter email address
 //7. Enter password
 //8. Enter phone number
