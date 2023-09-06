@@ -1,5 +1,6 @@
 package com.cydeo.tests.Day8_properties_config_reader;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,14 @@ public class  T4_Config_Practice {
 
     //Write "apple" on the search box
         WebElement googleSearchBox = Driver.getDriver().findElement(By.xpath("//textarea[@name='q']"));
+
+
+    googleSearchBox.sendKeys(ConfigurationReader.getProperty(""));
+
+
     }
+
+
 
 
 

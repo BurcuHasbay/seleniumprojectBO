@@ -18,7 +18,7 @@ public class Driver {
     /*
     We make WebDriver private, because we want to close access from outside of the class.
     We make it static because, we will use it in a static method.
-     */private static WebDriver driver;
+     */ public static WebDriver driver;
 
 
 
@@ -26,7 +26,7 @@ public class Driver {
     Create a re-usable utility method which will return the same driver instance when we call it.
      */
 
-private static WebDriver getDriver(){
+public static WebDriver getDriver(){
     if (driver ==null){
 
         String browserType = ConfigurationReader.getProperty("browser");
