@@ -67,6 +67,15 @@ public class T1_Registration_Form {
 
         femaleButton.click();
 
+        //10.Enter date of birth
+        WebElement dateOfBirth = Driver.getDriver().findElement(By.xpath("//input[@placeholder='MM/DD/YYYY']"));
+
+        //faker.number().numberBetween(2003,1930);
+
+        dateOfBirth.sendKeys("14/02/1994");
+
+
+
 
     }
 }
@@ -81,7 +90,7 @@ public class T1_Registration_Form {
 
 
 
-//10.Enter date of birth
+
 //11.Select Department/Office
 //12.Select Job Title
 //13.Select programming language from checkboxes
