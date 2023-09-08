@@ -5,6 +5,7 @@ import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -59,7 +60,7 @@ public class T1_Registration_Form {
 
         //8. Enter phone number
         WebElement phoneNumber = Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
-        phoneNumber.sendKeys(faker.phoneNumber().phoneNumber());
+        phoneNumber.sendKeys(faker.phoneNumber().phoneNumber().replaceAll(".",""));
 
 
         //9. Select a gender from radio buttons
@@ -72,9 +73,14 @@ public class T1_Registration_Form {
 
         //faker.number().numberBetween(2003,1930);
 
-        dateOfBirth.sendKeys("14/02/1994");
+        dateOfBirth.sendKeys("02/14/1994");
+
+        //11.Select Department/Office
+        Select departmentDropDown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
+        departmentDropDown.selectByIndex(faker.number().numberBetween(1,9)); //To randomize the test data, doesn't matter what to choose here
 
 
+        //12.Select Job Title
 
 
     }
@@ -91,8 +97,8 @@ public class T1_Registration_Form {
 
 
 
-//11.Select Department/Office
-//12.Select Job Title
+
+
 //13.Select programming language from checkboxes
 //14.Click to sign up button
 //15.Verify success message “You’ve successfully completed registration.” is displayed.
