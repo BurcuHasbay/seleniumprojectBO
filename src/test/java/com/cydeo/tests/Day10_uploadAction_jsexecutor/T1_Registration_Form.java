@@ -51,6 +51,15 @@ public class T1_Registration_Form {
 
         emailAddress.sendKeys(user + "@hotmail.com");
 
+        //7. Enter password
+
+        WebElement password = Driver.getDriver().findElement(By.xpath("//input[@name='password']"));
+
+        password.sendKeys(faker.numerify("########"));
+
+
+
+
 
     }
 }
@@ -62,7 +71,7 @@ public class T1_Registration_Form {
 
 
 
-//7. Enter password
+
 //8. Enter phone number
 //9. Select a gender from radio buttons
 //10.Enter date of birth
