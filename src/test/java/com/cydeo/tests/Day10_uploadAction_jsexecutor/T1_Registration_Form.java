@@ -62,7 +62,10 @@ public class T1_Registration_Form {
         phoneNumber.sendKeys(faker.phoneNumber().phoneNumber());
 
 
+        //9. Select a gender from radio buttons
+        WebElement femaleButton = Driver.getDriver().findElement(By.xpath("//input[@value='female']"));
 
+        femaleButton.click();
 
 
     }
@@ -77,7 +80,7 @@ public class T1_Registration_Form {
 
 
 
-//9. Select a gender from radio buttons
+
 //10.Enter date of birth
 //11.Select Department/Office
 //12.Select Job Title
