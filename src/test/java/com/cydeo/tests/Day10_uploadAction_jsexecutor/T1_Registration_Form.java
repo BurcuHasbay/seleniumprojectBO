@@ -57,6 +57,10 @@ public class T1_Registration_Form {
 
         password.sendKeys(faker.numerify("########"));
 
+        //8. Enter phone number
+        WebElement phoneNumber = Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
+        phoneNumber.sendKeys(faker.phoneNumber().cellPhone());
+
 
 
 
@@ -72,7 +76,7 @@ public class T1_Registration_Form {
 
 
 
-//8. Enter phone number
+
 //9. Select a gender from radio buttons
 //10.Enter date of birth
 //11.Select Department/Office
