@@ -59,7 +59,7 @@ public class T1_Registration_Form {
 
         //8. Enter phone number
         WebElement phoneNumber = Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
-        phoneNumber.sendKeys(faker.phoneNumber().cellPhone());
+        phoneNumber.sendKeys(faker.phoneNumber().phoneNumber());
 
 
 
