@@ -33,7 +33,7 @@ public class T3_Hover_Test {
         actions.moveToElement(img1).perform();
 
         //3. Assert:
-        //a. “name: user1” is displayed
+        //a- “name: user1” is displayed
         Assert.assertTrue(user1.isDisplayed());
 
 
