@@ -15,6 +15,9 @@ public class T2_Upload_Practice {
 
 
        // 2. Find some small file from your computer, and get the path of it. 3. Upload the file.
+        String path="/Users/burcuhasbay/Desktop/HOMEWORK 2PDF.pdf";
+
+
        // 4. Assert:
        // -File uploaded text is displayed on the page
     }
