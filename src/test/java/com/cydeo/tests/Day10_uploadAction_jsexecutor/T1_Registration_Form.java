@@ -79,8 +79,16 @@ public class T1_Registration_Form {
         Select departmentDropDown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
         departmentDropDown.selectByIndex(faker.number().numberBetween(1,9)); //To randomize the test data, doesn't matter what to choose here
 
-
         //12.Select Job Title
+        Select jobTitle = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='job_title']")));
+        jobTitle.selectByIndex(3);
+
+        //13.Select programming language from checkboxes
+
+        WebElement programmingLanguageCheckBox = Driver.getDriver().findElement(By.xpath("//input[@id='inlineCheckbox3']"));
+
+        programmingLanguageCheckBox.click();
+
 
 
     }
