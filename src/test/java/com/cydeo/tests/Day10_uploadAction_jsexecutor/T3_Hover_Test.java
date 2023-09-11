@@ -38,6 +38,17 @@ public class T3_Hover_Test {
 
 
 
+        //4. Hover over to second image
+        BrowserUtils.sleep(2000);
+        actions.moveToElement(img2).perform();
+
+        //5. Assert:
+        //a- “name: user2” is displayed
+        Assert.assertTrue(user2.isDisplayed());
+
+
+
+
 
 
 
@@ -48,9 +59,6 @@ public class T3_Hover_Test {
 
 
 
-    //4. Hover over to second image
-    //5. Assert:
-    //a. “name: user2” is displayed
 
     //6. Hover over to third image
     //7. Confirm:
