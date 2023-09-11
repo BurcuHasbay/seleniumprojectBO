@@ -18,7 +18,8 @@ public class T3_Hover_Test {
         WebElement img2 = Driver.getDriver().findElement(By.xpath("(//img)[2]"));
         WebElement img3 = Driver.getDriver().findElement(By.xpath("(//img)[3]"));
 
-
+        //Locate all the users here:
+        WebElement user1 = Driver.getDriver().findElement(By.xpath("//h5[text()='name: user1']"));
 
 
 
