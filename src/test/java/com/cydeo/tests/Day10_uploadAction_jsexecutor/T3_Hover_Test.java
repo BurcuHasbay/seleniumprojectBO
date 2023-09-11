@@ -20,6 +20,9 @@ public class T3_Hover_Test {
 
         //Locate all the users here:
         WebElement user1 = Driver.getDriver().findElement(By.xpath("//h5[text()='name: user1']"));
+        WebElement user2 = Driver.getDriver().findElement(By.xpath("//h5[text()='name: user2']"));
+        WebElement user3 = Driver.getDriver().findElement(By.xpath("//h5[text()='name: user3']"));
+
 
 
 
