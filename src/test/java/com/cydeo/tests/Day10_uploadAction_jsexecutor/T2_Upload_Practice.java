@@ -28,6 +28,8 @@ public class T2_Upload_Practice {
         WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
         uploadButton.click();
 
+        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.tagName("h3"));
+
        // 4. Assert:
 
 
