@@ -3,6 +3,7 @@ package com.cydeo.tests.Day10_uploadAction_jsexecutor;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T2_Upload_Practice {
@@ -32,6 +33,7 @@ public class T2_Upload_Practice {
 
        // 4. Assert:
 
+        Assert.assertTrue(fileUploadedHeader.isDisplayed());
 
        // -File uploaded text is displayed on the page
     }
