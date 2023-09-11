@@ -15,6 +15,12 @@ public class T3_Hover_Test {
 
         //Locate all images under here:
         WebElement img1 = Driver.getDriver().findElement(By.xpath("(//img)[1]"));
+        WebElement img2 = Driver.getDriver().findElement(By.xpath("(//img)[2]"));
+        WebElement img3 = Driver.getDriver().findElement(By.xpath("(//img)[3]"));
+
+
+
+
 
     }
     //2. Hover over to first image
