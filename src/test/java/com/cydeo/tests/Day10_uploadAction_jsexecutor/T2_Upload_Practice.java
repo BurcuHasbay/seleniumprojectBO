@@ -25,6 +25,8 @@ public class T2_Upload_Practice {
         fileUpload.sendKeys(path);
 
 
+        WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
+        uploadButton.click();
 
        // 4. Assert:
 
