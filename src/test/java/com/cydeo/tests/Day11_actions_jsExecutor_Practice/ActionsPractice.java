@@ -32,7 +32,7 @@ public class ActionsPractice {
             //TC #5: Scroll practice 2
         //1- Continue from where the Task 4 is left in the same test.
         // 2- Scroll back up to “Home” link using PageUP button
-        actions.sendKeys(Keys.PAGE_UP);
+        actions.sendKeys(Keys.PAGE_UP).perform();
 
     }
 
