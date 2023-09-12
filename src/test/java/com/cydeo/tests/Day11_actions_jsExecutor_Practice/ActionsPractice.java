@@ -24,10 +24,13 @@ public class ActionsPractice {
         // OR >>>    a[@href='https://cydeo.com/']
        WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
 
+
+        //4- Scroll using Actions class “moveTo(element)” method
         actions.moveToElement(cydeoLink).pause(4000).perform();
 
 
 
-        //4- Scroll using Actions class “moveTo(element)” method
+
+
     }
 }
