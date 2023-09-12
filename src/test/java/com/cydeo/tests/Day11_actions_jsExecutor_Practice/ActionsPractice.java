@@ -21,7 +21,11 @@ public class ActionsPractice {
         Actions actions = new Actions(Driver.getDriver());
 
         //Locating cydeo link to be able to pass in the actions method
+        // OR >>>    a[@href='https://cydeo.com/']
        WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
+
+
+
 
         //4- Scroll using Actions class “moveTo(element)” method
     }
