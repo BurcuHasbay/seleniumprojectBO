@@ -1,6 +1,7 @@
 package com.cydeo.tests.Day10_uploadAction_jsexecutor;
 
 import com.cydeo.utilities.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 public class T6_javascriptExecutor {
@@ -14,7 +15,9 @@ public class T6_javascriptExecutor {
 
         Driver.getDriver().get("https://practice.cydeo.com/infinite_scroll");
 
+       // ((JavascriptExecutor)Driver.getDriver()).executeScript("");
 
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
 
 
