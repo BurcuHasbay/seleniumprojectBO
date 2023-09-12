@@ -28,9 +28,16 @@ public class ActionsPractice {
         //4- Scroll using Actions class “moveTo(element)” method
         actions.moveToElement(cydeoLink).pause(4000).perform();
 
-
-
+            //TC #5: Scroll practice 2
+        //1- Continue from where the Task 4 is left in the same test.
+        // 2- Scroll back up to “Home” link using PageUP button
 
 
     }
+
+    /*
+
+
+     */
+
 }
