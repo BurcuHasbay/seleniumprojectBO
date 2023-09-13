@@ -36,7 +36,7 @@ public class ActionsPractice {
 
         // Driver.getDriver().quit(); it completely terminates (shut it down)>>electricity is gone:no connection to the driver
 
-
+        Driver.getDriver().close();
 
     }
 
