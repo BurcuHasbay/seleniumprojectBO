@@ -2,6 +2,7 @@ package com.cydeo.tests.Day11_actions_jsExecutor_Practice;
 
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -25,11 +26,16 @@ public class T7_ScrollDown_jsExecutor {
         //2- Go to: https://practice.cydeo.com/large
         Driver.getDriver().get("https://practice.cydeo.com/large");
 
-        //3- Scroll down to “Cydeo” link
+
         //Locate the CYDEO link first.
         WebElement cydeoLink= Driver.getDriver().findElement(By.linkText("CYDEO"));
         //Locate Home Link first.
         WebElement homeLink=Driver.getDriver().findElement(By.linkText("Home"));
+
+        //3- Scroll down to “Cydeo” link
+        //DOWN CASTING TO JSEXECUTOR
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView(true)",cydeoLink);
 
 
     }
