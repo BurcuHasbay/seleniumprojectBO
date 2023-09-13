@@ -27,7 +27,7 @@ public class LibraryLogInPage {
     public WebElement signInButton;
 
     @FindBy(id = "inputEmail-error")
-    public WebElement errorMessageFieldRequired;
+    public WebElement emailRequiredErrorMessage;
 
 }
 /*
