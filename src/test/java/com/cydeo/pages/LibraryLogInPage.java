@@ -26,14 +26,26 @@ public class LibraryLogInPage {
     @FindBy(xpath = "//button[.='Sign in']")
     public WebElement signInButton;
 
-    @FindBy(id = "inputEmail-error")
-    public WebElement emailRequiredErrorMessage;
+    @FindBy(xpath = "//div[.='This field is required.']/div")
+    public WebElement fieldRequiredErrorMessage;
+
+    @FindBy(xpath = "//div[.='Please enter a valid email address.']/div")
+    public WebElement enterValidEmailErrorMessage;
+
+        //1- Open a chrome browser
+        //2- Go to: https://library1.cydeo.com
+
+
+
+
+
+
+
 
 }
 /*
 #1: Required field error message test
-//1- Open a chrome browser
-//2- Go to: https://library1.cydeo.com
+
 //3- Do not enter any information
 //4- Click to “Sign in” button
 //5- Verify expected error is displayed:
