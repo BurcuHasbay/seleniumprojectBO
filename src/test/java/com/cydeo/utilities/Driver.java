@@ -44,7 +44,19 @@ private Driver(){}
         }
 
 
+
+        // If my driver session ID is NOT NULL, I want to make it Null- this completely terminates
+    //It makes its value always null after using quit() method.
+        public static void closeDriver(){
+        if (driver != null){
+            driver.quit(); //This line will terminate the existing session. Value will not even be null
+            driver = null;
+        }
+        //After this, it will create a new driver id. Ready to be used again
+        }
+
     }
+
 
 
 
