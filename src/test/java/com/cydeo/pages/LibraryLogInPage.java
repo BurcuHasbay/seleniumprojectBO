@@ -1,6 +1,7 @@
 package com.cydeo.pages;
 
 import com.cydeo.utilities.Driver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class LibraryLogInPage {
@@ -12,7 +13,9 @@ public class LibraryLogInPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
+    //#2 use @FindBy annotation to locate web elements
+    //Normally we would do this, WebElement .... = Driver.getDriver....
+    public WebElement inputUserName;
 
 
 
