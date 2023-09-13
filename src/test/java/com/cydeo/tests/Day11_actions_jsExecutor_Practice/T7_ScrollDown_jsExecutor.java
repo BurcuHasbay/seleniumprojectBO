@@ -35,7 +35,7 @@ public class T7_ScrollDown_jsExecutor {
         //3- Scroll down to “Cydeo” link
         //DOWN CASTING TO JSEXECUTOR
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].scrollIntoView(true)",cydeoLink);
+        js.executeScript("arguments[0].scrollIntoView(true)",cydeoLink); //method coming from JS
 
 
     }
