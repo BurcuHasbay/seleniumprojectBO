@@ -4,13 +4,14 @@ import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DragAndDropPractice {
     /*
    // #: Drag and drop
 /
-//3. Assert: -Text in big circle changed to: “You did great!”
+/
      */
 
 
@@ -35,9 +36,12 @@ public class DragAndDropPractice {
         actions.dragAndDrop(SmallerCircle,BiggerCircle).perform();
 
 
+        //3. Assert: -Text in big circle changed to: “You did great!”
 
+        String actualBigCircleText = BiggerCircle.getText();
+        String expectedBigCircleTest = "You did great!";
 
-
+        Assert.assertEquals(actualBigCircleText,expectedBigCircleTest);
 
 
 
