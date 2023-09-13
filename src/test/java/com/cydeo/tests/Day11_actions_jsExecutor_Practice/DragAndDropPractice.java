@@ -3,6 +3,7 @@ package com.cydeo.tests.Day11_actions_jsExecutor_Practice;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class DragAndDropPractice {
@@ -25,6 +26,8 @@ public class DragAndDropPractice {
         WebElement BiggerCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
         //2. Drag and drop the small circle to bigger circle.
+        //Creating an action Object here
+        Actions actions = new Actions(Driver.getDriver());
 
 
 
