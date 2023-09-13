@@ -34,12 +34,17 @@ public class ActionsPractice {
         // 2- Scroll back up to “Home” link using PageUP button
         actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP).perform(); //Option for scrolling
 
+        // Driver.getDriver().quit(); it completely terminates (shut it down)>>electricity is gone:no connection to the driver
 
 
 
     }
 
+    @Test
+    public void anyway_Test(){
+        Driver.getDriver().get("https://practice.cydeo.com/");
 
+    }
 
 
 
