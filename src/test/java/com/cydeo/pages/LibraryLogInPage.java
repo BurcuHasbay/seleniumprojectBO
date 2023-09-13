@@ -32,6 +32,10 @@ public class LibraryLogInPage {
     @FindBy(xpath = "//div[.='Please enter a valid email address.']/div")
     public WebElement enterValidEmailErrorMessage;
 
+    @FindBy(xpath = "//div[.='Sorry, Wrong Email or Password']")
+    public WebElement wrongEmailOrPasswordErrorMessage;
+
+
         //1- Open a chrome browser
         //2- Go to: https://library1.cydeo.com
 
