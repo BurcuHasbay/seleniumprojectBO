@@ -18,6 +18,9 @@ public class POMPractices {
         //First Create an Object of the class
         LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
 
+        //Reaching the web elements existing in the class
+        libraryLogInPage.signInButton.click();
+
 
 
     }
