@@ -13,7 +13,7 @@ public class T7_ScrollDown_jsExecutor {
    //#7: Scroll using JavascriptExecutor
 
 
-//4- Scroll up to “Home” link
+
 //5- Use below provided JS method only
 //JavaScript method to use : arguments[0].scrollIntoView(true)
 //Note: You need to locate the links as web elements and pass them as arguments into executeScript() method
@@ -35,7 +35,12 @@ public class T7_ScrollDown_jsExecutor {
         //3- Scroll down to “Cydeo” link
         //DOWN CASTING TO JSEXECUTOR
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //                                                            0
         js.executeScript("arguments[0].scrollIntoView(true)",cydeoLink); //method coming from JS
+
+        //4- Scroll up to “Home” link //                             0         1
+        js.executeScript("arguments[1].scrollIntoView(true)",cydeoLink,homeLink); //it will pass to homeLink this time
+
 
 
     }
