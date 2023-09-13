@@ -25,6 +25,10 @@ public class DragAndDropPractice {
         //Locate The Bigger Circle First.
         WebElement BiggerCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
+        //Locate Accept Cookies Button to get rid of it. It's an eyesore.
+        WebElement acceptCookiesButton = Driver.getDriver().findElement(By.xpath("//button[@id='onetrust-accept-btn-handler']"));
+        acceptCookiesButton.click();
+
         //2. Drag and drop the small circle to bigger circle.
         //Creating an action Object here
         Actions actions = new Actions(Driver.getDriver());
