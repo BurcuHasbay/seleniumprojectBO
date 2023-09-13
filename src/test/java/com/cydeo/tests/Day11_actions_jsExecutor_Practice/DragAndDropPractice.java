@@ -28,7 +28,7 @@ public class DragAndDropPractice {
         //2. Drag and drop the small circle to bigger circle.
         //Creating an action Object here
         Actions actions = new Actions(Driver.getDriver());
-        actions.dragAndDrop(SmallerCircle,BiggerCircle);
+        actions.dragAndDrop(SmallerCircle,BiggerCircle).perform();
 
 
 
