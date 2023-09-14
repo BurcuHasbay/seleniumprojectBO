@@ -10,7 +10,7 @@ public class POMPractices {
 
     @BeforeMethod
     public void setUp(){
-        Driver.getDriver().get("https://library1.cydeo.com ");
+        Driver.getDriver().get("https://library1.cydeo.com");
 
     }
 
@@ -52,6 +52,18 @@ public class POMPractices {
 
         //Expected: Please enter a valid email address.
 
+    }
+
+
+    @Test
+    public void invalidUsername_or_invalidPassword(){
+        LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
+
+        //3- Enter incorrect username or incorrect password
+        libraryLogInPage.inputUserName.sendKeys("asdf@asdf");
+        libraryLogInPage.inputPassword.sendKeys("sfhdhhfhdh");
+        libraryLogInPage.signInButton.click();
+
 
 
 
@@ -60,3 +72,13 @@ public class POMPractices {
 
 }
 
+
+
+/*
+#3: Library negative login
+1- Open a chrome browser
+2- Go to: https://library1.cydeo.com
+
+//4- Verify title expected error is displayed:
+Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
+ */
