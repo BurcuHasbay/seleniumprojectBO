@@ -1,7 +1,9 @@
 package com.cydeo.tests.Day12_POM_Design_ExplicitWait;
 
 import com.cydeo.pages.LibraryLogInPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -45,7 +47,10 @@ public class POMPractices {
         LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
 
     //3- Enter invalid email format
-        libraryLogInPage.inputUserName.sendKeys("asdfdfdfd");
+        libraryLogInPage.inputUserName.sendKeys(Keys.ENTER,"asadsddf");
+        //libraryLogInPage.inputUserName.sendKeys("asdfdfdfd");
+
+        BrowserUtils.sleep(6000);
 
         //4- Verify expected error is displayed:
         Assert.assertTrue(libraryLogInPage.enterValidEmailErrorMessage.isDisplayed());
