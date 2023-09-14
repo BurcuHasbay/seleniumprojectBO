@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 
 public class POMPractices {
 
+    LibraryLogInPage libraryLogInPage;
     @BeforeMethod
     public void setUp(){
         Driver.getDriver().get("https://library1.cydeo.com");
-
+        LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
     }
 
     @Test
@@ -23,7 +24,7 @@ public class POMPractices {
         //3- Do not enter any information
         //4- Click to “Sign in” button
         //First Create an Object of the class
-        LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
+
 
         //Reaching the web elements existing in the class
         libraryLogInPage.signInButton.click();
@@ -43,7 +44,6 @@ public class POMPractices {
     @Test
     public void  Task2_InvalidEmailFormat_errorMessage(){
 
-        LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
 
     //3- Enter invalid email format
         libraryLogInPage.inputUserName.sendKeys("somethingWrong");
@@ -64,7 +64,7 @@ public class POMPractices {
 
     @Test
     public void Task3_invalidUsername_or_invalidPassword(){
-        LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
+
 
         //3- Enter incorrect username or incorrect password
         libraryLogInPage.inputUserName.sendKeys("asdf@asdf");
@@ -83,13 +83,21 @@ public class POMPractices {
     public void Task4_library_negative_SignIn(){
 
         //3- Enter incorrect username or incorrect password
-            LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
+
             libraryLogInPage.inputUserName.sendKeys("wrong@username.com");
             libraryLogInPage.inputPassword.sendKeys("döfnödfgönfgö");
 
+            //Push SıgnIN Button
+            libraryLogInPage.signInButton.click();
+
             //4- Verify title expected error is displayed:
+                Assert.assertTrue(libraryLogInPage.wrongEmailOrPasswordErrorMessage.isDisplayed());
+
             //Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
-             */
+
+
+
+
     }
 
 
@@ -103,7 +111,7 @@ Library negative login
 
 
 
-/*
+
 #3: Library negative login
 1- Open a chrome browser
 2- Go to: https://library1.cydeo.com
