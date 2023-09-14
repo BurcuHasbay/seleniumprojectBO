@@ -48,6 +48,7 @@ public class POMPractices {
     //3- Enter invalid email format
         libraryLogInPage.inputUserName.sendKeys("somethingWrong");
         libraryLogInPage.signInButton.click();
+
         //libraryLogInPage.inputUserName.sendKeys("asdfdfdfd");
 
 
