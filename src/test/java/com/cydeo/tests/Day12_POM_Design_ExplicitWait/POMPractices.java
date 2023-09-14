@@ -64,8 +64,10 @@ public class POMPractices {
         libraryLogInPage.inputPassword.sendKeys("sfhdhhfhdh");
         libraryLogInPage.signInButton.click();
 
+        //4- Verify title expected error is displayed:
+        //Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
 
-
+        Assert.assertTrue(libraryLogInPage.wrongEmailOrPasswordErrorMessage.isDisplayed());
 
     }
 
@@ -79,6 +81,5 @@ public class POMPractices {
 1- Open a chrome browser
 2- Go to: https://library1.cydeo.com
 
-//4- Verify title expected error is displayed:
-Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
+
  */
