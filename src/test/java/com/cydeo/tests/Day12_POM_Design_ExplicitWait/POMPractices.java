@@ -80,9 +80,19 @@ public class POMPractices {
     }
 
     @Test
-    public void library_negative_SignIn
+    public void Task4_library_negative_SignIn(){
 
-    //3- Enter incorrect username or incorrect password
+        //3- Enter incorrect username or incorrect password
+            LibraryLogInPage libraryLogInPage = new LibraryLogInPage();
+            libraryLogInPage.inputUserName.sendKeys("wrong@username.com");
+            libraryLogInPage.inputPassword.sendKeys("döfnödfgönfgö");
+
+            //4- Verify title expected error is displayed:
+            //Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
+             */
+    }
+
+
 
 }
 
@@ -91,9 +101,7 @@ Library negative login
 //1- Open a chrome browser
 //2- Go to: https://library1.cydeo.com
 
-//4- Verify title expected error is displayed:
-//Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
- */
+
 
 /*
 #3: Library negative login
