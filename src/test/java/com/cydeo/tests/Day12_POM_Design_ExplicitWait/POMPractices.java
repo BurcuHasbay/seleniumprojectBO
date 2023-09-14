@@ -57,6 +57,7 @@ public class POMPractices {
         Assert.assertTrue(libraryLogInPage.enterValidEmailErrorMessage.isDisplayed());
 
         //Expected: Please enter a valid email address.
+        Driver.closeDriver();
 
     }
 
@@ -74,6 +75,7 @@ public class POMPractices {
         //Expected: Sorry, Wrong Email or Password NOTE: FOLLOW POM DESIGN PATTERN
 
         Assert.assertTrue(libraryLogInPage.wrongEmailOrPasswordErrorMessage.isDisplayed());
+        Driver.closeDriver();
 
     }
 
