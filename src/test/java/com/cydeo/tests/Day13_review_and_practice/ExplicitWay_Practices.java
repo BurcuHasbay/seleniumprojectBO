@@ -4,6 +4,7 @@ import com.cydeo.pages.DynamicControlPage;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,9 +32,12 @@ public class ExplicitWay_Practices {
         //4- Wait until “loading bar disappears”
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR));
 
+        //5- Verify:
+        //a- Checkbox is not displayed
+        Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
 
-
-
+        //b- “It’s gone!” message is displayed.
+        Assert.assertTrue(dynamicControlPage.itSGoneMessage.isDisplayed());
 
 
 
@@ -49,9 +53,8 @@ public class ExplicitWay_Practices {
 //2- Go to: https://practice.cydeo.com/dynamic_controls
 
 
-//5- Verify:
-//a- Checkbox is not displayed
-//b- “It’s gone!” message is displayed.
+
+
 //NOTE: FOLLOW POM
 
  */
