@@ -20,7 +20,7 @@ public class ExplicitWay_Practices {
     public void remove_button_test1(){
 
         //3- Click to “Remove” button
-       dynamicControlPage = new DynamicControlPage();
+       dynamicControlPage.removeButton.click();
 
 
 
