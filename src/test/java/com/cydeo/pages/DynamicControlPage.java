@@ -14,7 +14,8 @@ public class DynamicControlPage {
     @FindBy(xpath = "//div[@type='checkbox']")
     public WebElement checkBoxButton;
 
-    @FindBy(xpath = "//button[.='Remove']")
+    //xpath = "//button[.='Remove']"
+    @FindBy(css = "form#checkbox-example")
     public WebElement removeButton;
 
     @FindBy(id = "loading")
