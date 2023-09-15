@@ -16,7 +16,7 @@ public class T1_DoubleClick {
 
         //2. Switch to i frame.
         //An inline frame (iframe) is a HTML element that loads another HTML page within the document.
-        Driver.getDriver().switchTo().frame("");
+        Driver.getDriver().switchTo().frame("iframeResult");
 
         //3. Double click on the text “Double- click me to change my text color.”
         DoubleClickPage doubleClickPage = new DoubleClickPage();
