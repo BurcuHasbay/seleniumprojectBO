@@ -60,7 +60,21 @@ public class WebDriverWait_Practices {
 
         wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.LoadingBar));
 
+        //4. Assert username inputbox is displayed
+        Assert.assertTrue(dynamicLoad1Page.inputUserName.isDisplayed());
 
+
+        //5. Enter username: tomsmith
+        dynamicLoad1Page.inputUserName.sendKeys("tomsmith");
+
+        //6. Enter password: incorrectpassword
+        dynamicLoad1Page.inputPassword.sendKeys("incorrectpassword");
+
+        //7. Click to Submit button
+        dynamicLoad1Page.submitButton.click();
+
+        //8. Assert “Your password is invalid!” text is displayed.
+        Assert.assertTrue(dynamicLoad1Page.errorMessage.isDisplayed());
 
 
 
