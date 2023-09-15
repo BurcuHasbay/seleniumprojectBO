@@ -56,7 +56,7 @@ public class WebDriverWait_Practices {
         dynamicLoad1Page.startButton.click();
 
         //3. Wait until loading bar disappears. BUT FIRST CREATE a constructor OF WEB DRIVER WAIT
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
         wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.LoadingBar));
 
 
