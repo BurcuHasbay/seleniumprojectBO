@@ -51,13 +51,15 @@ public class WebDriverWait_Practices {
 
         //BEFORE ASSERTING- CREATE!!!! OBJECT OF 'DynamicLOAD7PAGE' TO REACH AND ASSERT WEB ELEMENTS
         DynamicLoad1Page dynamicLoad1Page = new DynamicLoad1Page();
-
-        //2. Click to start
-        dynamicLoad1Page.startButton.click();
-
-        //3. Wait until loading bar disappears. BUT FIRST CREATE a constructor OF WEB DRIVER WAIT
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
+
+        //3. Click to start
+                dynamicLoad1Page.startButton.click();
+
+        //2. Wait until loading bar disappears. BUT FIRST CREATE a constructor OF WEB DRIVER WAIT
+
         wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.LoadingBar));
+
 
 
         //4. Assert username inputbox is displayed
