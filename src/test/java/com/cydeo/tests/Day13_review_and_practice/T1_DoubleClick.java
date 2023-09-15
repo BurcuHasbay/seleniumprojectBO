@@ -25,7 +25,9 @@ public class T1_DoubleClick {
 
         actions.doubleClick(doubleClickPage.textToDoubleClick).perform();
 
-
+        //4. Assert:Text’s“style”attribute value contains“red”.
+        System.out.println("doubleClickPage.textToDoubleClick.getAttribute(\"style\") = "
+                + doubleClickPage.textToDoubleClick.getAttribute("style"));
 
 
     }
@@ -38,6 +40,5 @@ public class T1_DoubleClick {
 //https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2
 
 
-//4. Assert:Text’s“style”attribute value contains“red”.
-//NOTE: FOLLOW POM
+
  */
