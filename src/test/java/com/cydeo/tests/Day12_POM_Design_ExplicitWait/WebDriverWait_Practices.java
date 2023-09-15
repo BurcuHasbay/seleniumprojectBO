@@ -31,6 +31,9 @@ public class WebDriverWait_Practices {
         //4. Assert: Message “Done” is displayed.
         Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
 
+        //5. Assert: Image is displayed.
+
+        Assert.assertTrue(dynamicLoad7Page.spongeBobImage.isDisplayed());
 
 
     }
@@ -41,5 +44,4 @@ public class WebDriverWait_Practices {
 
 
 
-//4. Assert: Image is displayed.
-//Note: Follow POM
+
