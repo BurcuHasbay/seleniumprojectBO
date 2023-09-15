@@ -4,6 +4,7 @@ import com.cydeo.pages.DynamicLoad7Page;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -28,7 +29,7 @@ public class WebDriverWait_Practices {
         DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
         //4. Assert: Message “Done” is displayed.
-
+        Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
 
 
 
