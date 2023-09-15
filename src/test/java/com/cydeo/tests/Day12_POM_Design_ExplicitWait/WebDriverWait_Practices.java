@@ -1,5 +1,6 @@
 package com.cydeo.tests.Day12_POM_Design_ExplicitWait;
 
+import com.cydeo.pages.DynamicLoad1Page;
 import com.cydeo.pages.DynamicLoad7Page;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,7 +49,14 @@ public class WebDriverWait_Practices {
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/1");
 
 
+        //BEFORE ASSERTING- CREATE!!!! OBJECT OF 'DynamicLOAD7PAGE' TO REACH AND ASSERT WEB ELEMENTS
+        DynamicLoad1Page dynamicLoad1Page = new DynamicLoad1Page();
+
         //2. Click to start
+        dynamicLoad1Page.startButton.click();
+
+
+
 
     }
 
