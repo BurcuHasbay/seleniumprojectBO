@@ -48,6 +48,8 @@ public class WebDriverWait_Practices {
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/1");
 
 
+        //2. Click to start
+
     }
 
 }
@@ -55,7 +57,7 @@ public class WebDriverWait_Practices {
 /*
 
 
-//2. Click to start
+
 //3. Wait until loading bar disappears
 //4. Assert username inputbox is displayed
 //5. Enter username: tomsmith
