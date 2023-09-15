@@ -55,6 +55,17 @@ public class WebDriverWait_Practices {
         //2. Click to start
         dynamicLoad1Page.startButton.click();
 
+        //3. Wait until loading bar disappears. BUT FIRST CREATE a constructor OF WEB DRIVER WAIT
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.LoadingBar));
+
+
+        //4. Assert username inputbox is displayed
+        Assert.assertTrue(dynamicLoad1Page.inputUserName.isDisplayed());
+
+
+
+
 
 
 
@@ -66,8 +77,8 @@ public class WebDriverWait_Practices {
 
 
 
-//3. Wait until loading bar disappears
-//4. Assert username inputbox is displayed
+
+
 //5. Enter username: tomsmith
 //6. Enter password: incorrectpassword
 //7. Click to Submit button
