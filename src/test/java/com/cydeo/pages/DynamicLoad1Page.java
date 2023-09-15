@@ -28,5 +28,8 @@ public class DynamicLoad1Page {
     @FindBy(xpath = "//input[@type='submit']")
     public  WebElement submitButton;
 
+    @FindBy(id = "flash")
+    public  WebElement errorMessage;
+
 
 }
