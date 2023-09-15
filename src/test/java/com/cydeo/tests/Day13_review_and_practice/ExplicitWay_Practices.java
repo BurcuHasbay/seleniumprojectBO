@@ -23,13 +23,13 @@ public class ExplicitWay_Practices {
 
     @Test
     public void remove_button_test1(){
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
         //3- Click to “Remove” button
-       dynamicControlPage.removeButton.click();
+        dynamicControlPage.removeButton.click();
 
 
         //4- Wait until “loading bar disappears”
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR));
 
         //5- Verify:
