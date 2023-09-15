@@ -25,7 +25,7 @@ public class DynamicLoad1Page {
     @FindBy(xpath = "//input[@type='password']")
     public  WebElement inputPassword;
 
-    @FindBy(css = "//button[@type='submit']")
+    @FindBy(xpath ="//button[@type='submit']")
     public  WebElement submitButton;
 
     @FindBy(id = "flash")
