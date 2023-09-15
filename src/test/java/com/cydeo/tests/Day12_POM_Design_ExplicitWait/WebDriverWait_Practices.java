@@ -1,5 +1,6 @@
 package com.cydeo.tests.Day12_POM_Design_ExplicitWait;
 
+import com.cydeo.pages.DynamicLoad7Page;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,9 +25,10 @@ public class WebDriverWait_Practices {
 
         //BEFORE ASSERTING- CREATE!!!! OBJECT OF 'DynamicLOAD7PAGE' TO REACH AND ASSERT WEB ELEMENTS
 
-
+        DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
         //4. Assert: Message “Done” is displayed.
+
 
 
 
