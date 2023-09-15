@@ -17,7 +17,7 @@ public class DynamicLoad1Page {
     public WebElement startButton;
 
     @FindBy(css = "div#loading")
-    public WebElement Loading;
+    public WebElement LoadingBar;
 
     @FindBy(xpath = "//input[@type='username']")
     public WebElement inputUserName;
