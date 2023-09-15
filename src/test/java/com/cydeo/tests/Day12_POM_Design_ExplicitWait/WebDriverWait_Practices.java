@@ -64,8 +64,16 @@ public class WebDriverWait_Practices {
         Assert.assertTrue(dynamicLoad1Page.inputUserName.isDisplayed());
 
 
+        //5. Enter username: tomsmith
+        dynamicLoad1Page.inputUserName.sendKeys("tomsmith");
 
+        //6. Enter password: incorrectpassword
+        dynamicLoad1Page.inputPassword.sendKeys("incorrectpassword");
 
+        //7. Click to Submit button
+        dynamicLoad1Page.submitButton.click();
+
+        //8. Assert “Your password is invalid!” text is displayed.
 
 
 
@@ -79,10 +87,10 @@ public class WebDriverWait_Practices {
 
 
 
-//5. Enter username: tomsmith
-//6. Enter password: incorrectpassword
-//7. Click to Submit button
-//8. Assert “Your password is invalid!” text is displayed.
+
+
+
+
 //Note: Follow POM Design Pattern
  */
 
