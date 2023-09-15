@@ -2,6 +2,7 @@ package com.cydeo.tests.Day13_review_and_practice;
 
 import com.cydeo.pages.DoubleClickPage;
 import com.cydeo.utilities.Driver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class T1_DoubleClick {
@@ -18,7 +19,13 @@ public class T1_DoubleClick {
 
         //3. Double click on the text “Double- click me to change my text color.”
         DoubleClickPage doubleClickPage = new DoubleClickPage();
-        doubleClickPage.textToDoubleClick.click();
+
+        //for creating object, need a constructor
+        Actions actions = new Actions(Driver.getDriver());
+
+        actions.doubleClick(doubleClickPage.textToDoubleClick).perform();
+
+
 
 
     }
