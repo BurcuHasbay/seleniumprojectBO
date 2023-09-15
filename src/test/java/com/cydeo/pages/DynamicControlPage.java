@@ -20,5 +20,7 @@ public class DynamicControlPage {
     @FindBy(id = "loading")
     public WebElement loadingBAR;
 
+    @FindBy(xpath = "//p[@id='message']")
+    public WebElement itSGoneMessage;
 
 }
