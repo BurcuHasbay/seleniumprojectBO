@@ -11,8 +11,7 @@ public class T1_DoubleClick {
     public void t1_double_click(){
 
 
-        Driver.getDriver().get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblcli\n" +
-                "ck2");
+        Driver.getDriver().get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2");
 
         //2. Switch to i frame.
         //An inline frame (iframe) is a HTML element that loads another HTML page within the document.
