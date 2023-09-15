@@ -22,16 +22,21 @@ public class WebDriverWait_Practices {
         //3.use the "wait" object  to be able to create certain condition to wait
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
+        //BEFORE ASSERTING- CREATE!!!! OBJECT OF 'DynamicLOAD7PAGE' TO REACH AND ASSERT WEB ELEMENTS
+
+
+
         //4. Assert: Message “Done” is displayed.
+
+
 
     }
 
 }
-/*
+
 
 
 
 
 //4. Assert: Image is displayed.
 //Note: Follow POM
- */
