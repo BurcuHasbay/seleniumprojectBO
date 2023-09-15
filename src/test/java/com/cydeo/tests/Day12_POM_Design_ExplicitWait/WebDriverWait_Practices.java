@@ -38,6 +38,13 @@ public class WebDriverWait_Practices {
 
     }
 
+
+
+    @Test
+    public void dynamically_load_1_Test(){
+
+    }
+
 }
 
 
