@@ -2,6 +2,7 @@ package com.cydeo.tests.Day13_review_and_practice;
 
 import com.cydeo.utilities.Driver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class ExplicitWay_Practices {
 
@@ -12,7 +13,13 @@ public class ExplicitWay_Practices {
 
     }
 
+    @Test
+    public void remove_button_test1(){
 
+
+
+
+    }
 
 }
 
