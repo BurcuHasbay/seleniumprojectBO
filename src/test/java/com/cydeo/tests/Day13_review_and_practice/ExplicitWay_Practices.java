@@ -58,7 +58,9 @@ public class ExplicitWay_Practices {
         dynamicControlPage.enableButton.click();
 
         //4- Wait until “loading bar disappears”
+            wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
             wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR2));
+
 
 
 
