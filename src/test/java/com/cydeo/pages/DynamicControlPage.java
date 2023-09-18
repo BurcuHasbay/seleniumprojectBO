@@ -22,7 +22,7 @@ public class DynamicControlPage {
     @FindBy(css = "div#loading")
     public WebElement loadingBAR;
 
-    @FindBy(xpath = "//p[@id='message']")
+    @FindBy(css = "p[id='message']")
     public WebElement itSGoneMessage;
 
 }
