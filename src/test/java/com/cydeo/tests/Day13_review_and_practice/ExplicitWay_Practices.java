@@ -34,13 +34,13 @@ public class ExplicitWay_Practices {
 
         //5- Verify:
         //a- Checkbox is not displayed
-        Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
+        // OPTION 1-)Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
+        //OPTION 2-)
+        Assert.assertFalse(dynamicControlPage.checkBoxButton.isDisplayed());
 
         //b- “It’s gone!” message is displayed.
+
         Assert.assertTrue(dynamicControlPage.itSGoneMessage.isDisplayed());
-
-
-
 
     }
 
