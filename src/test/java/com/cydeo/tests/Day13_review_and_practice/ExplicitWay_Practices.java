@@ -18,7 +18,7 @@ public class ExplicitWay_Practices {
     public void setUp(){
 
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_controls");
-        DynamicControlPage dynamicControlPage = new DynamicControlPage();
+        dynamicControlPage = new DynamicControlPage();
     }
 
     @Test
