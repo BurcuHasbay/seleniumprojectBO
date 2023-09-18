@@ -41,7 +41,6 @@ public class ExplicitWay_Practices {
         try {
             //assertFalse method will pass the test if the boolean value returned is: false
             Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-            Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
             Assert.assertFalse(dynamicControlPage.checkBoxButton.isDisplayed());
         }catch (NoSuchElementException n){
             Assert.assertTrue(true);
@@ -51,6 +50,31 @@ public class ExplicitWay_Practices {
         Assert.assertTrue(dynamicControlPage.itSGoneMessage.isDisplayed());
         Assert.assertTrue(dynamicControlPage.itSGoneMessage.getText().equals("It's gone!"));
     }
+
+    @Test
+    public void enable_button_test2(){
+        //3- Click to “Enable" Button
+
+
+
+
+
+
+
+    }
+
+    /*
+    #3: Explicit wait practice
+//1- Open a chrome browser
+//2- Go to: https://practice.cydeo.com/dynamic_controls
+e” button
+//4- Wait until “loading bar disappears”
+//5- Verify:
+//a- Input box is enabled.
+//b- “It’s enabled!” message is displayed.
+//NOTE: FOLLOW POM
+     */
+
     }
 
 
