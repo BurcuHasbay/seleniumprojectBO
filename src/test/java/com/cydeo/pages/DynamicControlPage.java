@@ -18,7 +18,7 @@ public class DynamicControlPage {
     @FindBy(css = "form#checkbox-example")
     public WebElement removeButton;
 
-    @FindBy(id = "loading")
+    @FindBy(css = "div#loading")
     public WebElement loadingBAR;
 
     @FindBy(xpath = "//p[@id='message']")
