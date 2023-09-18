@@ -31,4 +31,10 @@ public class DynamicControlPage {
     @FindBy(css = "div#loading")
     public WebElement loadingBAR2;
 
+    @FindBy(css = "p[id='message']")
+    public WebElement itsEnabledMessage;
+
+    @FindBy(css="form#input-example>input")
+    public WebElement inputBox;
+
 }
