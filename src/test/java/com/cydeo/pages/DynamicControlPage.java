@@ -12,7 +12,7 @@ public class DynamicControlPage {
     }
 
     //@FindBy(css = "input[type='checkbox']")
-    @FindBy(css = "button[onclick='swapCheckbox()']")
+    @FindBy(css = "form#checkbox-example>button")
     public WebElement checkBoxButton;
 
     //xpath = "//button[.='Remove']"
