@@ -64,10 +64,10 @@ public class WebDriverWait_Practices {
         Assert.assertTrue(dynamicLoad1Page.inputUserName.isDisplayed());
 
 
-        //5. Enter username: tomsmith
+        //5. Enter username: to msmith
         dynamicLoad1Page.inputUserName.sendKeys("tomsmith");
 
-        //6. Enter password: incorrectpassword
+        //6. Enter password: incorrect password
         dynamicLoad1Page.inputPassword.sendKeys("incorrectpassword");
 
         //7. Click to Submit button
