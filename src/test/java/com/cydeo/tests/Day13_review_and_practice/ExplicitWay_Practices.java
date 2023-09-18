@@ -61,9 +61,12 @@ public class ExplicitWay_Practices {
             wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
             wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR2));
 
+            //5- Verify:
+            //a- Input box is enabled.
+        Assert.assertTrue(dynamicControlPage.enableButton.isEnabled());
 
-
-
+        //b- “It’s enabled!” message is displayed.
+        Assert.assertTrue(dynamicControlPage.itsEnabledMessage.isEnabled());
 
 
     }
@@ -74,9 +77,8 @@ public class ExplicitWay_Practices {
 //2- Go to: https://practice.cydeo.com/dynamic_controls
 e” button
 
-//5- Verify:
-//a- Input box is enabled.
-//b- “It’s enabled!” message is displayed.
+
+
 //NOTE: FOLLOW POM
      */
 
