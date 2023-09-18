@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class ExplicitWay_Practices {
 
     DynamicControlPage dynamicControlPage;
+    WebDriverWait wait;
 
     @BeforeMethod
     public void setUp() {
@@ -31,7 +32,7 @@ public class ExplicitWay_Practices {
 
         //4- Wait until “loading bar disappears”
         Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR));
 
 
@@ -54,8 +55,10 @@ public class ExplicitWay_Practices {
     @Test
     public void enable_button_test2(){
         //3- Click to “Enable" Button
+        dynamicControlPage.enableButton.click();
 
-
+        //4- Wait until “loading bar disappears”
+            wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR2));
 
 
 
@@ -68,7 +71,7 @@ public class ExplicitWay_Practices {
 //1- Open a chrome browser
 //2- Go to: https://practice.cydeo.com/dynamic_controls
 e” button
-//4- Wait until “loading bar disappears”
+
 //5- Verify:
 //a- Input box is enabled.
 //b- “It’s enabled!” message is displayed.
