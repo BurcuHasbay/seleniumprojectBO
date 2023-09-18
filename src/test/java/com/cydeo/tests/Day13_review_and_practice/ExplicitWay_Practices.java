@@ -10,46 +10,55 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class ExplicitWay_Practices {
 
     DynamicControlPage dynamicControlPage;
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
 
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_controls");
         dynamicControlPage = new DynamicControlPage();
     }
 
     @Test
-    public void remove_button_test1(){
+    public void remove_button_test1() {
 
-        //3- Click to “Remove” button
+//3- Click to “Remove” button
         dynamicControlPage.removeButton.click();
 
-
         //4- Wait until “loading bar disappears”
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.invisibilityOf(dynamicControlPage.loadingBAR));
 
-        //5- Verify:
-        //a- Checkbox is not displayed// ACTUALLY IT IS DELETED THAT'S WHY TEST FAILS ALL THE TIME
-        // ''TRY''
-        try{
-            Assert.assertFalse(dynamicControlPage.checkBoxButton.isDisplayed());
 
+        //5- Verify:
+        // Checkbox is not displayed
+
+        try {
+            //assertFalse method will pass the test if the boolean value returned is: false
+            Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
+            Assert.assertFalse(dynamicControlPage.checkBoxButton.isDisplayed());
         }catch (NoSuchElementException n){
-            Assert.fail();
+            Assert.assertTrue(true);
         }
 
-
-
-
-
+        //b. “It’s gone!” message is displayed.
+        Assert.assertTrue(dynamicControlPage.itSGoneMessage.isDisplayed());
+        Assert.assertTrue(dynamicControlPage.itSGoneMessage.getText().equals("It's gone!"));
+    }
     }
 
-}
+
+
+
+
+
+
 
 
 /*
