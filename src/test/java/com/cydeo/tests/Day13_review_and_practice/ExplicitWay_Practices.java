@@ -37,9 +37,10 @@ public class ExplicitWay_Practices {
         //a- Checkbox is not displayed// ACTUALLY IT IS DELETED THAT'S WHY TEST FAILS ALL THE TIME
         // ''TRY''
         try{
-            Assert.assertTrue(!dynamicControlPage.checkBoxButton.isDisplayed());
-        }catch (NoSuchElementException b){
-            Assert.assertTrue(true);
+            Assert.assertFalse(dynamicControlPage.checkBoxButton.isDisplayed());
+
+        }catch (NoSuchElementException n){
+            Assert.fail();
         }
 
 
